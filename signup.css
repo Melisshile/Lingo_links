@@ -1,0 +1,82 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #cce7ff, #f0f8ff);
+}
+
+/* Container Styling */
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 50%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+select {
+    cursor: pointer;
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    background: blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: darkblue;
+}
