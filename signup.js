@@ -1,26 +1,27 @@
-document.getElementById("signup-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent form submission
+document.getElementById('signup-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
 
-    // Get form values
-    const name = document.getElementById("name").value.trim();
-    const surname = document.getElementById("surname").value.trim();
-    const nationality = document.getElementById("nationality").value;
+    const name = document.getElementById('name').value;
+    const surname = document.getElementById('surname').value;
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const nationality = document.getElementById('nationality').value;
+    // const gender = document.getElementsByName('gender').value;
     const gender = document.querySelector('input[name="gender"]:checked');
-    const phone = document.getElementById("phone").value.trim();
+    const phoneNumber = document.getElementById('phone').value;
+    
+    //time to send a request
+    const response = await fetch('/auth/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({name, surname, username, email, password, confirmPassword, nationality, gender, phoneNumber})
+    });
 
-    // Validate fields
-    if (!name || !surname || !nationality || !gender || !phone) {
-        alert("Please fill in all fields.");
-        return;
-    }
-
-    // Validate phone number format
-    const phoneRegex = /^[0-9]{10,15}$/; // Adjust regex as needed
-    if (!phoneRegex.test(phone)) {
-        alert("Please enter a valid phone number (10-15 digits).");
-        return;
-    }
-
-    // If all validations pass
-    alert(`Thank you for signing up, ${name} ${surname}!`);
+    //sending data to the server
+    const data = await response.json();
+    alert(data.message);
 });

@@ -1,0 +1,19 @@
+{
+  "name": "fullproject",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000L\u0000i\u0000n\u0000g\u0000o\u0000_\u0000l\u0000i\u0000n\u0000k\u0000s\u0000\r\u0000 \u0000",
+  "main": "land.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4",
+    "nodemon": "^3.1.7"
+  }
+}
